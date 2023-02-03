@@ -49,11 +49,11 @@
     "test:watch": "react-scripts test --env=jsdom",
     "build:flow": "cp flow-template dist/index.cjs.js.flow && cp flow-template dist/index.esm.js.flow",
     "build:source": "rollup -c",
-    "build": "del dist && mkdir dist && npm build:flow && npm build:source",
+    "build": "del dist && mkdir dist && npm run build:flow && npm run build:source",
     "start": "rollup -c -w",
     "prepare": "npm run build",
-    "website:build": "cd website && npm build",
-    "website:deploy": "cd website && npm deploy",
+    "website:build": "cd website && npm run build",
+    "website:deploy": "cd website && npm run deploy",
     "website:run": "cd website && npm start"
   },
   "lint-staged": {
